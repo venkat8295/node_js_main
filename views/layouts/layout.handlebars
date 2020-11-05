@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spritle Authentication And Data Sharing !</title>
+    <link rel="stylesheet"
+          href="/public/css/bootstrap.min.css"
+          type="text/css">
+    <link rel="stylesheet"
+          href="/public/css/bootstrap-theme.min.css"
+          type="text/css">
+    <link rel="stylesheet"
+          href="/css/style.css">
+  </head>
+  <body>
+    {{#if success_messages }}
+      <div class="alert alert-success">{{success_messages}}</div>
+    {{/if}}
+    {{#if error_messages }}
+      <div class="alert alert-danger">{{error_messages}}</div>
+    {{/if}}
+    <div class="container">
+      {{> navbar}}
+      {{{body}}}
+      {{> footer}}
+    </div>
+    	<ul class="character-list-container"></ul>
+    <script id="character-template" type="text/x-handlebars-template">
+
+      <li class="character">
+            <h5>\{{name}}//Check</h5>
+            <p>\{{img}}</p>
+      </li>
+    </script>
+    <script src="/public/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/public/js/handlebars.js" type="text/javascript"></script>
+    <script src="/public/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/public/js/jquery-confirm.min.js" type="text/javascript"></script>
+    <script src="/public/js/scripts.js" type="text/javascript"></script>
+  </body>
+</html>
