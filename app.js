@@ -13,7 +13,7 @@ const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-acce
 
 require('./config/passport');
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://venkat8295:venkat8295@cluster0.ibnmh.mongodb.net/node_app?retryWrites=true&w=majority',{
+mongoose.connect(MongoDB_Link,{
   useUnifiedTopology:true,
   useNewUrlParser:true,
   useFindAndModify:false
