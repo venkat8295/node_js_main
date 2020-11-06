@@ -101,7 +101,7 @@ router.route('/register')
       const newUser = await new User(result.value);
       console.log("newUser:",newUser);
       await newUser.save();
-
+/*
       // Compose Mail
       const html = `Hi There,<br/> Thank You For Registering Data Authentication!, <br/><br/> Please Verify Your Email By Typing The Following Token: </br>
                    Token:<b> ${secretToken}</b>
@@ -112,7 +112,7 @@ router.route('/register')
 
                    // Send The Email
                    await mailer.sendEmail('Developer@Authentication.com', result.value.email,'Please Verify Your Mail',html);
-
+*/
       req.flash('success','Check Your Mail! || Please Login !');
       res.redirect('/users/login');
 
